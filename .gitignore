@@ -1,0 +1,16 @@
+logs/*.log
+#*.exe
+*.exp
+*.lib
+*.dll
+*.o
+*.obj
+*.out
+*.so
+*.a
+
+rk4_cuda
+rk4_mpi_cuda
+rk4_mpi_omp
+rk4_omp
+rk4_serial
