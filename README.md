@@ -3,11 +3,11 @@
 This repository has several implementations of the classical fourth‑order Runge–Kutta (RK4) method for solving ordinary differential equations. Each version explores a different parallelization strategy—ranging from single-threaded C++ to hybrid MPI + CUDA—to highlight how algorithm structure and hardware capabilities affect performance.
 
 ## Implementations
-- `rk4_serial.cpp` — baseline single-threaded solver for correctness and reference timing.
+- `rk4_serial.cpp` — serial implementation.
 - `rk4_omp.cpp` — OpenMP implementation for shared-memory parallelism on multi-core CPUs.
-- `rk4_mpi_omp_1d.cpp` / `rk4_mpi_omp_2d.cpp` — hybrid MPI + OpenMP solvers for 1D and 2D domain decompositions.
+- `rk4_mpi_omp_1d.cpp` / `rk4_mpi_omp_2d.cpp` — hybrid MPI + OpenMP solvers for 1D and 2D domain decompositions across nodes.
 - `rk4_cuda.cu` — CUDA-only implementation targeting a single GPU.
-- `rk4_mpi_cuda_1d.cu` / `rk4_mpi_cuda_2d.cu` — hybrid MPI + CUDA versions that distribute work across GPUs.
+- `rk4_mpi_cuda_1d.cu` / `rk4_mpi_cuda_2d.cu` — hybrid MPI + CUDA versions that distribute work across GPUs across nodes.
 - `slurm/` — example batch scripts for cluster queues.
 - `runs/` — sample inputs or job configurations (if present).
 - `parallel_rk4_report.pdf` — summary of design choices and performance observations.
