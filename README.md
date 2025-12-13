@@ -10,7 +10,6 @@ This repository has several implementations of the classical fourth‑order Rung
 - `rk4_mpi_cuda_1d.cu` / `rk4_mpi_cuda_2d.cu` — hybrid MPI + CUDA versions that distribute work across GPUs across nodes.
 - `slurm/` — example batch scripts for cluster queues.
 - `runs/` — sample inputs or job configurations (if present).
-- `parallel_rk4_report.pdf` — summary of design choices and performance observations.
 
 ## Build
 Install the toolchain you need for your target (GNU C++ with OpenMP, MPI library, and/or CUDA Toolkit). Adjust include and library paths to match your environment.
